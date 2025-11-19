@@ -17,18 +17,21 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    delete data.confirm_password;
-    try {
-      const response = await registerUser(data);
-      console.log(response);
-      if (response.success) {
-        setSuccessMsg(response.message);
-        setTimeout(() => navigate("/login"),3000);
-      }
-    } catch (error) {
-      console.log("Registration failed", error);
+  delete data.confirm_password;
+
+  try {
+    const response = await registerUser(data);
+    console.log(response);
+
+    if (response.success) {
+      setSuccessMsg("Registration successful! Redirecting to login...");
+      setTimeout(() => navigate("/login"), 3000);
     }
-  };
+  } catch (error) {
+    console.log("Registration failed", error);
+  }
+};
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-amber-900/20 p-16">

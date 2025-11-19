@@ -20,8 +20,12 @@ const BorrowRecord = () => {
     fetchBorrows();
   }, []);
 
-  if (loading) return <p>Loading borrow records...</p>;
-  if (!borrows.length) return <p>No borrow history yet.</p>;
+  if (loading) return(
+    <div className="w-full h-80 text-center">Loading borrow records...</div>
+  );
+  if (!borrows.length) return (
+    <div className="w-full h-80 text-center">No borrow history yet.</div>
+  );
 
   return (
     <table className="w-full text-left border-collapse">

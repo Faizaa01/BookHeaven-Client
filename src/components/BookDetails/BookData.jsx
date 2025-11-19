@@ -36,9 +36,6 @@ const BookData = ({ book }) => {
       <div className="flex gap-8 mt-16">
         <BorrowButton bookId={book.id} />
         <ReturnButton bookId={book.id} />
-        <Link to="/borrowrecord">
-        <button>Borrow Records</button>
-        </Link>
       </div>
     </div>
   );

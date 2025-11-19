@@ -4,8 +4,8 @@ import bk from "../../assets/images/b1.png";
 
 const Hero = () => {
     return (
-        <section
-      className="w-full h-[550px] mx-auto bg-cover bg-center flex justify-center items-center px-4 md:px-8 relative overflow-hidden"
+      <section
+      className="w-full h-[550px] mx-auto bg-cover bg-center flex justify-center items-center px-4 md:px-8 relative overflow-hidden z-0"
       style={{ backgroundImage: `url(${bg})` }}>
       <div className="absolute inset-0 bg-black/5"></div>
       <div className="container w-full flex flex-col md:flex-row items-center justify-around px-4 md:px-8 relative z-10">

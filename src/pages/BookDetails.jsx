@@ -17,7 +17,6 @@ const BookDetails = () => {
   }, [bookId]);
 
   if (loading) return (
-  // <div className="p-10 text-center">Loading...</div>
   <div className="text-center py-8 m-56">
     <div className="inline-block w-8 h-8 border-4 border-gray-300 border-t-gray-600 rounded-full animate-spin"></div>
   </div>
