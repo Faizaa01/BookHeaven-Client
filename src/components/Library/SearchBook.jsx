@@ -16,7 +16,7 @@ const SearchBook = ({
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search..."
-                className="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-300"
+                className="w-full pl-4 pr-10 py-2 text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-300"
               />
               <button className="absolute right-0 top-0 h-full px-4 bg-rose-300 hover:bg-pink-400 text-white rounded-r-md">
                 <Search className="w-5 h-5" />

@@ -24,6 +24,7 @@ const BookDetails = () => {
   if (!book) return <div className="p-10 text-center">Book Not Found</div>;
 
   return (
+    <div className="bg-white  min-h-screen">
     <div className="max-w-7xl mx-auto px-4 py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <BookImage images={book.images} name={book.title} />
@@ -31,6 +32,7 @@ const BookDetails = () => {
       </div>
       <Recommendations categoryId={book.category.id} currentBookId={book.id} />
     </div>
+  </div>
   );
 };
 

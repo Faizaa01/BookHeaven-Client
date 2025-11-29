@@ -1,6 +1,5 @@
-import React from 'react';
-import Banner from '../components/Shop/Banner';
-import ShopPage from '../components/Shop/ShopPage';
+import Banner from '../components/Library/Banner';
+import ShopPage from '../components/Library/LibraryPage';
 
 const Shop = () => {
     return (

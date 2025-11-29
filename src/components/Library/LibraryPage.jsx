@@ -32,7 +32,7 @@ const ShopPage = () => {
 
 
   return (
-    <div className="w-full min-h-screen bg-base-200">
+    <div className="w-full min-h-screen bg-gray-50">
       <div className="max-w-11/12 mx-auto px-4 py-4">
         <h1 className="text-4xl font-serif text-neutral-500 text-center py-12">
           Explore Your Favourite Books

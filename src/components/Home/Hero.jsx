@@ -22,7 +22,7 @@ const Hero = () => {
           <Link to="shop">
           <button className="bg-lime-900/60 hover:bg-red-300 text-white px-6 py-3 mt-8 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl animate-fade-in-up opacity-0"
                   style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-            Shop Now
+            Explore Books
           </button>
           </Link>
         </div>

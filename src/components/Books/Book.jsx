@@ -65,12 +65,14 @@ const Book = () => {
                         GRAB YOUR OPPORTUNITY
                     </p>
                     <h2 className="text-4xl md:text-5xl font-serif text-gray-900">
-                        Books With Offer
+                        Books You Will Love
                     </h2>
                 </div>
                 
+                
                 {/* Navigation Buttons */}
-                <div className="flex gap-2 mb-8">
+                <div className="flex items-center justify-between mb-8">
+                <div className="flex gap-2">
                     <button
                         onClick={handlePrev}
                         disabled={currentIndex === 0}
@@ -85,6 +87,13 @@ const Book = () => {
                     >
                         <ChevronRight className="w-6 h-6 text-gray-700" />
                     </button>
+                </div>
+                <Link
+                    to="/shop"
+                    className="px-5 py-2 bg-gray-900 text-white rounded-full hover:bg-gray-700 transition-all"
+                >
+                    View Library
+                </Link>
                 </div>
 
                 {/* Slider Container */}

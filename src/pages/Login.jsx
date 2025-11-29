@@ -29,14 +29,15 @@ const Login = () => {
   };
 
   return (
+    <div className="bg-white">
     <div className="min-h-screen bg-pink-900/20 flex flex-col items-center justify-center px-4 relative overflow-hidden">
       <div className="max-w-6xl w-full relative z-10">
         {/* Welcome Section */}
         <div className="text-center mb-8">
-          <h1 className="text-5xl font-bold text- mb-4 drop-shadow-lg">
+          <h1 className="text-5xl font-bold text- mb-4 drop-shadow-lg text-black">
             WELCOME BACK
           </h1>
-          <p className="text-lg">
+          <p className="text-lg text-black">
             Sign in to continue your journey through our awesome bookstore collection
           </p>
         </div>
@@ -56,7 +57,7 @@ const Login = () => {
                 id="username"
                 type="text"
                 placeholder="Enter your username"
-                className={`w-full rounded-lg px-4 py-3 border ${
+                className={`w-full rounded-lg px-4 py-3 border text-black ${
                   errors.username ? "border-red-300" : "border-gray-300"
                 } bg-gray-100 focus:outline-none focus:ring-1 focus:ring-rose-200 transition`}
                 {...register("username", { required: "Username is required" })}
@@ -74,7 +75,7 @@ const Login = () => {
                 id="password"
                 type="password"
                 placeholder="••••••••"
-                className={`w-full rounded-lg px-4 py-3 border ${
+                className={`w-full rounded-lg px-4 py-3 border text-black ${
                   errors.password ? "border-red-300" : "border-gray-300"
                 } bg-gray-100 focus:outline-none focus:ring-1 focus:ring-rose-200 transition`}
                 {...register("password", { required: "Password is required" })}
@@ -118,6 +119,7 @@ const Login = () => {
           className="w-32 h-32 object-contain"
         />
       </div>
+    </div>
     </div>
   );
 };
