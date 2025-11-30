@@ -29,7 +29,7 @@ const Newsletter = () => {
                 </div>
 
                 {/* Right Illustration */}
-                <div className="lg:block blur-xs absolute right-0 bottom-0 w-1/2 h-full">
+                <div className="blur-xs lg:blur-none absolute right-0 bottom-0 w-1/2 h-full">
                     <img src={Img} 
                         alt="Reading illustration" 
                         className="absolute bottom-0 right-0 h-full w-full object-contain object-bottom-right"

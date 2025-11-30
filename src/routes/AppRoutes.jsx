@@ -9,6 +9,7 @@ import Register from "../pages/Register";
 import BorrowRecord from "../pages/BorrowRecord";
 import ProfilePage from "../components/Profile/ProfilePage";
 import SettingsPage from "../components/Profile/SettingsPage";
+import MembershipPage from "../pages/Membership";
 
 
 const AppRoutes = () => {
@@ -24,6 +25,7 @@ const AppRoutes = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/profile" element={<ProfilePage />} />
                 <Route path="/settings" element={<SettingsPage />} />
+                <Route path="/membership" element={<MembershipPage/>} />
             </Route>
         </Routes>
     );

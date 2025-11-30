@@ -26,6 +26,11 @@ const Navbar = () => {
                             Library
                         </Link>
                     </li>
+                    <li className="mb-1">
+                        <Link to="/membership" className="text-gray-800 hover:bg-rose-100 hover:text-rose-800 font-medium py-3 px-4 transition-all duration-200">
+                            Membership
+                        </Link>
+                    </li>
                     <li>
                         <Link to="/about" className="text-gray-800 hover:bg-rose-100 hover:text-rose-800 font-medium py-3 px-4 transition-all duration-200">
                             About
@@ -36,15 +41,20 @@ const Navbar = () => {
                 <a className="btn btn-ghost text-stone-700 text-3xl gap-2 lg:ml-6"> <BookHeart className='size-8 text-rose-300'/> BOOK HEAVEN</a>
             </div>
             <div className="navbar-end">
-                <ul className="menu menu-horizontal px-1 hidden md:flex mr-10 lg:gap-4">
+                <ul className="menu menu-horizontal px-1 hidden md:flex lg:mr-10 lg:gap-4">
                     <li>
                         <Link to="/" className="text-stone-500 hover:text-stone-800 text-lg px-2 py-2 flex items-center gap-2 border-b-2 border-transparent hover:border-stone-800 transition-colors">
                             HOME
                         </Link>
                     </li>
                     <li>
-                        <Link to="/shop" className="text-stone-500 hover:text-stone-800 text-lg px-3 py-2 flex items-center gap-2 border-b-2 border-transparent hover:border-stone-800 transition-colors">
+                        <Link to="/shop" className="text-stone-500 hover:text-stone-800 text-lg px-2 py-2 flex items-center gap-2 border-b-2 border-transparent hover:border-stone-800 transition-colors">
                             LIBRARY
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/membership" className="text-stone-500 hover:text-stone-800 text-lg px-2 py-2 flex items-center gap-2 border-b-2 border-transparent hover:border-stone-800 transition-colors">
+                            MEMBERSHIP
                         </Link>
                     </li>
                     <li>
