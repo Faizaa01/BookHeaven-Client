@@ -53,7 +53,9 @@ const MembershipPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 px-6"
-    style={{ backgroundImage: `url(${bg})` , backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      style={{ backgroundImage: `url(${bg})` , 
+      backgroundSize: 'cover', 
+      backgroundPosition: 'center' }}>
       <div className="bg-white shadow-lg rounded-xl p-8 max-w-md w-full">
         <h1 className="text-2xl font-semibold text-center mb-4 text-rose-300">
           Membership

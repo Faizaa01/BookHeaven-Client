@@ -22,7 +22,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="mb-1">
-                        <Link to="/shop" className="text-gray-800 hover:bg-rose-100 hover:text-rose-800 font-medium py-3 px-4 transition-all duration-200">
+                        <Link to="/library" className="text-gray-800 hover:bg-rose-100 hover:text-rose-800 font-medium py-3 px-4 transition-all duration-200">
                             Library
                         </Link>
                     </li>
@@ -48,7 +48,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/shop" className="text-stone-500 hover:text-stone-800 text-lg px-2 py-2 flex items-center gap-2 border-b-2 border-transparent hover:border-stone-800 transition-colors">
+                        <Link to="/library" className="text-stone-500 hover:text-stone-800 text-lg px-2 py-2 flex items-center gap-2 border-b-2 border-transparent hover:border-stone-800 transition-colors">
                             LIBRARY
                         </Link>
                     </li>

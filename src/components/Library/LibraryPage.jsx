@@ -7,6 +7,8 @@ import useFetchBook from "../../hooks/useFetchBooks";
 import useFetchCategory from "../../hooks/useFetchCategory";
 import { useSearchParams } from "react-router";
 import useFetchAuthor from "../../hooks/useFetchAuthor";
+import AddButtons from "./AddButtons";
+import useAuthContext from "../../hooks/useAuthContext";
 
 const ShopPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,7 +31,7 @@ const ShopPage = () => {
 
   const categories = useFetchCategory();
   const authors = useFetchAuthor();
-
+  const { user } = useAuthContext();
 
   return (
     <div className="w-full min-h-screen bg-gray-50">
@@ -45,6 +47,8 @@ const ShopPage = () => {
           sortOrder={sortOrder}
           setSortOrder={setSortOrder}
         />
+
+        {user?.is_staff && <AddButtons />}
 
         <div className="flex gap-6">
           {/* Sidebar Filter */}

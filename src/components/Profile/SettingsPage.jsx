@@ -10,11 +10,8 @@ import bg from "../../assets/images/5.jpg";
 const SettingsPage = () => {
   const [isEditing, setIsEditing] = useState(false);
   const { user, updateUserProfile, changePassword, errorMsg } = useAuthContext();
-
-  // Only initialize form after user is loaded
   const { register, handleSubmit, watch, reset, formState: { errors, isSubmitting } } = useForm();
 
-  // Populate form when user data arrives
   useEffect(() => {
     if (user) {
       reset({

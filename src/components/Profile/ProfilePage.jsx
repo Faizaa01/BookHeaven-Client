@@ -36,7 +36,6 @@ const ProfilePage = () => {
       className="min-h-screen w-full pt-28 px-6 bg-cover bg-center flex justify-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      {/* widen it */}
       <div className="w-full max-w-5xl space-y-10">
         
         {/* Profile Section */}

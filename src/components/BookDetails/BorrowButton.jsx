@@ -41,7 +41,7 @@ const BorrowButton = ({ bookId, onSuccess }) => {
       className={`px-8 py-4 rounded text-white ${
         loading || isBorrowed
           ? "bg-gray-400 cursor-not-allowed"
-          : "bg-rose-400 hover:bg-pink-500"
+          : "bg-rose-400 hover:bg-pink-600"
       }`}
     >
       {loading ? "Borrowing..." : isBorrowed ? "Unavailable" : "Borrow"}

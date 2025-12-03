@@ -10,6 +10,10 @@ import BorrowRecord from "../pages/BorrowRecord";
 import ProfilePage from "../components/Profile/ProfilePage";
 import SettingsPage from "../components/Profile/SettingsPage";
 import MembershipPage from "../pages/Membership";
+import AddBook from "../pages/AddBook";
+import EditBook from "../pages/EditBook";
+import AddAuthor from "../pages/AddAuthor";
+import AddCategory from "../pages/AddCategory";
 
 
 const AppRoutes = () => {
@@ -17,8 +21,8 @@ const AppRoutes = () => {
         <Routes>
             <Route element={<MainLayout />}>
                 <Route path="/" element={<Home />} />
-                <Route path="/shop" element={<Shop />} />
-                <Route path="shop/:bookId" element={<BookDetails />} />
+                <Route path="/library" element={<Shop />} />
+                <Route path="library/:bookId" element={<BookDetails />} />
                 <Route path="/borrowrecord" element={<BorrowRecord />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/register" element={<Register />} />
@@ -26,6 +30,10 @@ const AppRoutes = () => {
                 <Route path="/profile" element={<ProfilePage />} />
                 <Route path="/settings" element={<SettingsPage />} />
                 <Route path="/membership" element={<MembershipPage/>} />
+                <Route path="/addbook" element={<AddBook/>} />
+                <Route path="/book/edit/:bookId" element={<EditBook/>} />
+                <Route path="/addauthor" element={<AddAuthor/>} />
+                <Route path="/addcategory" element={<AddCategory/>} />
             </Route>
         </Routes>
     );

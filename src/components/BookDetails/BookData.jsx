@@ -1,8 +1,11 @@
 import { Link } from "react-router";
 import BorrowButton from "./BorrowButton";
 import ReturnButton from "./ReturnButton";
+import UpdateBook from "./UpdateBook";
+import DeleteBook from "./DeleteBook";
 
-const BookData = ({ book }) => {
+const BookData = ({ book, user, onDelete }) => {
+
   return (
     <div className="space-y-6 p-6 bg-white shadow-lg border border-gray-200">
       
@@ -33,10 +36,21 @@ const BookData = ({ book }) => {
       </div>
 
       {/* Action Buttons */}
-      <div className="flex gap-8 mt-16">
-        <BorrowButton bookId={book.id} />
-        <ReturnButton bookId={book.id} />
+      <div className="flex gap-4 mt-10 justify-start">
+        {!user?.is_staff ? (
+          <>
+            <BorrowButton bookId={book.id} />
+            <ReturnButton bookId={book.id} />
+          </>
+        ) : (
+          <>
+            <UpdateBook bookId={book.id} />
+            <DeleteBook bookId={book.id} onDelete={onDelete} />
+          </>
+        )}
       </div>
+
+
     </div>
   );
 };

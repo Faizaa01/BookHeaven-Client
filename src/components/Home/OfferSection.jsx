@@ -18,7 +18,7 @@ const OfferSection = () => {
                                 style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
                                 Fresh books ready to borrow
                             </h1>
-                            <Link to="/shop">
+                            <Link to="/library">
                             <button className="bg-gray-900/60 hover:bg-white hover:text-black text-white border rounded-full px-6 py-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl animate-fade-in-up opacity-0 w-fit"
                                     style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
                                 Browse Collection 
@@ -42,7 +42,7 @@ const OfferSection = () => {
                                 style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
                                 Readers’ favorite picks
                             </h1>
-                            <Link to="/shop">
+                            <Link to="/library">
                             <button className="bg-gray-900/60 hover:bg-white hover:text-black text-white border rounded-full px-6 py-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl animate-fade-in-up opacity-0 w-fit"
                                     style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
                                 View Popular Books 

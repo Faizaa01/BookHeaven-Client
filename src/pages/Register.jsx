@@ -34,9 +34,10 @@ const Register = () => {
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-amber-900/30 p-16">
-      <div className="w-full max-w-4xl rounded-xl shadow-lg overflow-hidden flex">
-        <div className="w-1/2 flex flex-col justify-center p-8 bg-white/50 backdrop-blur-md border border-white/30">
+    <div className="min-h-screen flex items-center justify-center bg-amber-900/30 p-6 md:p-16">
+      <div className="w-full max-w-4xl rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+        {/* left */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center p-8 bg-white/50 backdrop-blur-md border border-white/30">
           <div className="mb-4 text-center">
             <h1 className="font-logo text-3xl mb-2">Register</h1>
             <p className="text-lg text-gray-700">Welcome to BookHeaven</p>
@@ -184,8 +185,9 @@ const Register = () => {
             </p>
           </div>
         </div>
-
-        <div className="w-1/2 overflow-hidden">
+        
+        {/* right */}
+        <div className="hidden md:block md:w-1/2 overflow-hidden">
           <img
             src={bg}
             alt="Lovebirds Illustration"

@@ -3,7 +3,7 @@ import defaultImage from "../../assets/images/default.jpg";
 
 const BookItem = ({ book }) => {
     return (
-        <Link to={`/shop/${book.id}`}>
+        <Link to={`/library/${book.id}`}>
         <div className="group cursor-pointer h-full flex flex-col">
             <div className="shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex-1 flex flex-col">
                 <div className="w-full bg-amber-900/10 h-80 flex items-center justify-center py-8">
