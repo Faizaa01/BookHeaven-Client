@@ -138,7 +138,7 @@ const EditBook = () => {
             </select>
           </div>
 
-          <button type="submit" className="btn btn-secondary w-full py-3 text-lg font-semibold">Update Book</button>
+          <button type="submit" className="btn btn-warning text-black opacity-60 w-full py-3 text-lg font-semibold">Update Book</button>
         </form>
 
         <div className="mt-6">
@@ -159,7 +159,7 @@ const EditBook = () => {
           )}
           <button
             onClick={handleUpload}
-            className="btn btn-secondary w-full mt-4 py-3 text-lg font-semibold"
+            className="btn btn-warning text-black opacity-60 w-full mt-4 py-3 text-lg font-semibold"
             disabled={loading}
           >
             {loading ? "Uploading images..." : "Upload Images"}

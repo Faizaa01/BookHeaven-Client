@@ -1,13 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import authApiClient from '../services/auth-api-client';
-import { useNavigate } from 'react-router';
 import bg from '../assets/images/0.jpeg';
 
 const AddAuthor = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  const [authors, setAuthors] = useState([]);
+
+  const fetchAuthors = async () => {
+    try {
+      const res = await authApiClient.get('/authors/');
+      setAuthors(res.data);
+    } catch (err) {
+      console.error('Error fetching authors', err);
+    }
+  };
+
+  useEffect(() => {
+      fetchAuthors();
+    }, []);
 
   const onSubmit = async (data) => {
     console.log(data)
@@ -17,14 +29,25 @@ const AddAuthor = () => {
         name: data.name,
         biography: data.bio,
       };
-      const res = await authApiClient.post('/authors/', payload);
+      await authApiClient.post('/authors/', payload);
+      await fetchAuthors();
       alert('Author added successfully');
-      navigate("/library");
     } catch (err) {
       console.error('Error adding author', err);
       alert('Failed to add author');
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      await authApiClient.delete(`/authors/${id}/`);
+      setAuthors(authors.filter(c => c.id !== id));
+      alert("Author deleted successfully");
+    } catch (err) {
+      console.error('Delete failed', err);
+      alert('Failed to delete');
     }
   };
 
@@ -55,12 +78,32 @@ const AddAuthor = () => {
 
           <button
             type="submit"
-            className="btn btn-secondary w-full py-3 text-lg font-semibold"
+            className="btn btn-warning text-black opacity-60 w-full py-3 text-lg font-semibold"
             disabled={loading}
           >
             {loading ? 'Adding...' : 'Add Author'}
           </button>
         </form>
+
+        <h3 className="text-2xl text-center font-semibold mt-10 mb-4 text-gray-800">Existing Authors</h3>
+
+        {authors.length === 0 ? (
+          <p className="text-gray-700">No authors found.</p>
+        ) : (
+          <ul className="space-y-3">
+            {authors.map(aut => (
+              <li key={aut.id} className="flex justify-between items-center bg-white/50 p-3 rounded-md shadow">
+                <span className="text-gray-800 font-medium">{aut.name}</span>
+                <button
+                  onClick={() => handleDelete(aut.id)}
+                  className="px-3 py-1 bg-red-300 text-white rounded-md hover:bg-red-600"
+                >
+                  Delete
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </section>
   );

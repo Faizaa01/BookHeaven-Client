@@ -9,6 +9,7 @@ const BorrowRecord = () => {
   const fetchBorrows = async () => {
     try {
       const response = await authApiClient.get("/borrowrecords/");
+      console.log(response.data)
       setBorrows(response.data);
     } catch (err) {
       console.error("Failed to fetch borrow records:", err);
@@ -23,10 +24,10 @@ const BorrowRecord = () => {
 
   return (
     <div
-      className="min-h-screen w-full flex justify-center items-start pt-24 px-4 bg-cover bg-center"
+      className="min-h-screen w-full flex justify-center items-start py-24 px-4 bg-cover bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="w-full max-w-3xl bg-white/30 backdrop-blur-xl shadow-lg rounded-2xl p-8 border border-white/40">
+      <div className="w-full max-w-4xl bg-white/30 backdrop-blur-xl shadow-lg rounded-2xl p-8 border border-white/40">
         <h2 className="text-center text-2xl font-semibold text-black mb-6">
           Borrow History
         </h2>
@@ -43,17 +44,27 @@ const BorrowRecord = () => {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="text-gray-600 border-b border-white/50">
-                <th className="px-4 py-2">Book</th>
-                <th className="px-4 py-2">Status</th>
-                <th className="px-4 py-2">Date</th>
+                <th className="px-8 py-2">User</th>
+                <th className="px-8 py-2">Image</th>
+                <th className="px-8 py-2">Book</th>
+                <th className="px-8 py-2">Status</th>
+                <th className="px-8 py-2">Date</th>
               </tr>
             </thead>
 
             <tbody>
               {borrows.map((b) => (
                 <tr key={b.id} className="border-b border-white/40">
-                  <td className="px-4 py-2 text-gray-600">{b.book.title}</td>
-                  <td className="px-4 py-2">
+                  <td className="px-8 py-2 text-gray-900 font-serif">{b.member.name}</td>
+                  <td className="px-8 py-2">
+                    <img 
+                      src={b.book.images[0]?.image} 
+                      alt={b.book.title} 
+                      className="h-24 w-18 object-cover rounded-md"
+                    />
+                  </td>
+                  <td className="px-8 py-2 text-gray-700 font-mono">{b.book.title}</td>
+                  <td className="px-8 py-2">
                     <span
                       className={
                         b.status === "BORROWED" ? "text-red-300" : "text-lime-600"
@@ -62,7 +73,7 @@ const BorrowRecord = () => {
                       {b.status}
                     </span>
                   </td>
-                  <td className="px-4 py-2 text-gray-600">
+                  <td className="px-8 py-2 text-gray-600">
                     {b.status === "BORROWED" ? b.borrow_date : b.return_date || "-"}
                   </td>
                 </tr>

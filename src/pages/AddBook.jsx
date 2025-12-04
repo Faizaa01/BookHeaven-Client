@@ -175,7 +175,7 @@ const AddBook = () => {
             )}
         </div>
 
-        <button type="submit" className="btn btn-secondary text-black opacity-70 w-full py-4 text-lg font-semibold transition-colors duration-200">
+        <button type="submit" className="btn btn-warning text-black opacity-60 w-full py-4 text-lg font-semibold transition-colors duration-200">
             Add Book
         </button>
 
@@ -206,7 +206,7 @@ const AddBook = () => {
           )}
 
           <button onClick={handleUpload}
-            className="btn btn-secondary text-black opacity-70 w-full mt-6 py-3 text-lg font-semibold transition-colors duration-200"
+            className="btn btn-warning text-black opacity-60 w-full mt-6 py-3 text-lg font-semibold transition-colors duration-200"
             disabled={loading} >
             {loading ? "Uploading images..." : "Upload Images"}
           </button>

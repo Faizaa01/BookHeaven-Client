@@ -25,7 +25,7 @@ const Recommendations = ({ categoryId, currentBookId }) => {
 
   return (
     <div className="mt-16">
-      <h2 className="text-2xl font-semibold mb-6">More from this category</h2>
+      <h2 className="text-2xl font-semibold mb-6 text-black">Recommendations</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {books.map((book) => (
           <BookItem key={book.id} book={book} />

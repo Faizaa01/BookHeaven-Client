@@ -45,7 +45,7 @@ const OfferSection = () => {
                             <Link to="/library">
                             <button className="bg-gray-900/60 hover:bg-white hover:text-black text-white border rounded-full px-6 py-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl animate-fade-in-up opacity-0 w-fit"
                                     style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-                                View Popular Books 
+                                View Books 
                             </button>
                             </Link>
                         </div>

@@ -11,6 +11,7 @@ const ProfilePage = () => {
   const fetchHistory = async () => {
     try {
       const res = await authApiClient.get("/borrowrecords/");
+      console.log(res.data)
       setHistory(res.data);
     } catch (err) {
       console.log(err);
@@ -69,20 +70,22 @@ const ProfilePage = () => {
               {history.map((item) => (
                 <div
                   key={item.id}
-                  className="p-5 bg-white/40 backdrop-blur-xl border rounded-xl text-gray-600"
+                  className="p-5 bg-white/40 backdrop-blur-xl border rounded-xl text-gray-600 flex items-center justify-between gap-6"
                 >
-                  <p>
-                    <span className="font-semibold">Book:</span>{" "}
-                    {item.book_title}
-                  </p>
-                  <p>
-                    <span className="font-semibold">Borrow Date:</span>{" "}
-                    {item.borrow_date}
-                  </p>
-                  <p>
-                    <span className="font-semibold">Return Date:</span>{" "}
-                    {item.return_date || "Not returned"}
-                  </p>
+                  <div className="flex-1 space-y-1">
+                    <p><span className="font-semibold">Book:</span> {item.book.title}</p>
+                    <p><span className="font-semibold">User:</span> {item.member.name}</p>
+                    <p><span className="font-semibold">Borrow Date:</span> {item.borrow_date}</p>
+                    <p><span className="font-semibold">Return Date:</span> {item.return_date || "Not returned"}</p>
+                  </div>
+
+                  {item.book.images?.length > 0 && (
+                    <img
+                      src={item.book.images[0].image}
+                      alt={item.book.title}
+                      className="w-22 h-32 object-cover rounded-lg border shadow-md"
+                    />
+                  )}
                 </div>
               ))}
             </div>
