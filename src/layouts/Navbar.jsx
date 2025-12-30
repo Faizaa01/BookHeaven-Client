@@ -5,6 +5,7 @@ import useAuthContext from '../hooks/useAuthContext';
 
 const Navbar = () => {
      const { user, logoutUser } = useAuthContext();
+
     return (
         <div>
             <div className="navbar bg-rose-100 shadow-sm h-24 relative z-[100]">
@@ -85,6 +86,13 @@ const Navbar = () => {
                                 Borrow Records
                             </Link>
                         </li>
+                        {user.is_staff && (
+                            <li className="mb-1">
+                                <Link to="members" className="hover:text-red-400 font-medium py-3 px-3 transition-all duration-200 flex items-center gap-3">
+                                    Member Lists
+                                </Link>
+                            </li>
+                        )}
                         <li className="mb-1">
                             <Link to="settings" className="hover:text-red-400 font-medium py-3 px-3 transition-all duration-200 flex items-center gap-3">
                                 Settings

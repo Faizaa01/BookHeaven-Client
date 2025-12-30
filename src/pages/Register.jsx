@@ -34,12 +34,13 @@ const Register = () => {
 
 
   return (
+    <div className="bg-white">
     <div className="min-h-screen flex items-center justify-center bg-amber-900/30 p-6 md:p-16">
       <div className="w-full max-w-4xl rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
         {/* left */}
         <div className="w-full md:w-1/2 flex flex-col justify-center p-8 bg-white/50 backdrop-blur-md border border-white/30">
           <div className="mb-4 text-center">
-            <h1 className="font-logo text-3xl mb-2">Register</h1>
+            <h1 className="font-logo text-3xl mb-2 text-black">Register</h1>
             <p className="text-lg text-gray-700">Welcome to BookHeaven</p>
           </div>
           {errorMsg && <ErrorAlert error={errorMsg} />}
@@ -76,7 +77,7 @@ const Register = () => {
                 id="username"
                 type="text"
                 placeholder="Your username"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
+                className="w-full px-3 py-2 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
                 {...register("username", { required: "Username is required" })}
               />
               {errors.username && (
@@ -93,7 +94,7 @@ const Register = () => {
                 id="email"
                 type="email"
                 placeholder="name@example.com"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
+                className="w-full px-3 py-2 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
                 {...register("email", { required: "Email is Required" })}
               />
               {errors.email && (
@@ -110,7 +111,7 @@ const Register = () => {
                 id="password"
                 type="password"
                 placeholder="••••••••"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
+                className="w-full px-3 py-2 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
                 {...register("password", {
                   required: "Password is required",
                   minLength: { value: 8, message: "Password must be at least 8 characters" },
@@ -129,7 +130,7 @@ const Register = () => {
                 id="confirmPassword"
                 type="password"
                 placeholder="••••••••"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
+                className="w-full px-3 py-2 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
                 {...register("confirm_password", {
                   required: "Confirm Password is required",
                   validate: (value) =>
@@ -150,7 +151,7 @@ const Register = () => {
                 id="address"
                 type="text"
                 placeholder="7/A Dhanmondi, Dhaka"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
+                className="w-full px-3 py-2 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
                 {...register("address")}
               />
             </div>
@@ -163,7 +164,7 @@ const Register = () => {
                 id="phone_number"
                 type="text"
                 placeholder="0123456789"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
+                className="w-full px-3 py-2 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
                 {...register("phone_number")}
               />
             </div>
@@ -195,6 +196,7 @@ const Register = () => {
           />
         </div>
       </div>
+    </div>
     </div>
   );
 };

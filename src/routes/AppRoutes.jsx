@@ -14,6 +14,7 @@ import AddBook from "../pages/AddBook";
 import EditBook from "../pages/EditBook";
 import AddAuthor from "../pages/AddAuthor";
 import AddCategory from "../pages/AddCategory";
+import Members from "../pages/Members";
 
 
 const AppRoutes = () => {
@@ -34,6 +35,7 @@ const AppRoutes = () => {
                 <Route path="/book/edit/:bookId" element={<EditBook/>} />
                 <Route path="/addauthor" element={<AddAuthor/>} />
                 <Route path="/addcategory" element={<AddCategory/>} />
+                <Route path="/members" element={<Members />} />
             </Route>
         </Routes>
     );
