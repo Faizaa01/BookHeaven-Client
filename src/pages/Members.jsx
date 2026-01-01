@@ -40,9 +40,9 @@ const Members = () => {
   }
 
   return (
-    <div className="min-h-auto bg-gray-100 p-28">
-      <div className="max-w-5xl mx-auto bg-stone-50 shadow-lg rounded-xl p-6">
-        <h1 className="text-3xl font-semibold text-center mb-6 text-gray-700">
+    <div className="min-h-auto bg-gray-100 p-24">
+      <div className="max-w-3xl mx-auto bg-gray-200 shadow-lg rounded-xl p-6">
+        <h1 className="text-2xl font-semibold text-center mb-6 text-gray-700">
           Registered Members
         </h1>
 
@@ -51,24 +51,24 @@ const Members = () => {
             No members found.
           </p>
         ) : (
-          <table className="w-full border text-xl">
-            <thead className="bg-sky-100">
+          <table className="w-full border text-md">
+            <thead className="bg-red-100">
               <tr>
-                <th className="border p-3">Name</th>
-                <th className="border p-3">Email</th>
-                <th className="border p-3">Membership Date</th>
+                <th className="border border-gray-400 p-3">Name</th>
+                <th className="border border-gray-400 p-3">Email</th>
+                <th className="border border-gray-400 p-3">Membership Date</th>
               </tr>
             </thead>
             <tbody>
               {members.map((member) => (
-                <tr key={member.id} className="text-center">
-                  <td className="border p-3">
+                <tr key={member.id} className="text-center bg-sky-100">
+                  <td className="border border-gray-400 p-3">
                     {member.name}
                   </td>
-                  <td className="border p-3">
+                  <td className="border border-gray-400 p-3">
                     {member.email}
                   </td>
-                  <td className="border p-3">
+                  <td className="border border-gray-400 p-3">
                     {member.membership_date}
                   </td>
                 </tr>
