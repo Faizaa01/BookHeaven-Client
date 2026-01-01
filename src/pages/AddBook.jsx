@@ -79,7 +79,7 @@ const AddBook = () => {
     <section className='bg-rose-100 py-20' style={{backgroundImage: `url(${bg})`,backgroundSize: 'cover'}}>
     <div className="max-w-xl mx-auto mt-12 p-8 shadow-md rounded-lg bg-white/30 backdrop-blur-xl"
         >
-      <h2 className="text-3xl font-semibold mb-6 text-gray-800 text-center">Add New Product</h2>
+      <h2 className="text-3xl font-semibold mb-6 text-gray-800 text-center">Add New Book</h2>
       {!bookId ? (
         <form onSubmit={handleSubmit(handleBookAdd)} className="space-y-10">
           <div>

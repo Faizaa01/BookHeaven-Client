@@ -40,9 +40,9 @@ const Members = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-xl p-6">
-        <h1 className="text-2xl font-semibold text-center mb-6 text-gray-700">
+    <div className="min-h-auto bg-gray-100 p-28">
+      <div className="max-w-5xl mx-auto bg-stone-50 shadow-lg rounded-xl p-6">
+        <h1 className="text-3xl font-semibold text-center mb-6 text-gray-700">
           Registered Members
         </h1>
 
@@ -51,8 +51,8 @@ const Members = () => {
             No members found.
           </p>
         ) : (
-          <table className="w-full border text-sm">
-            <thead className="bg-gray-100">
+          <table className="w-full border text-xl">
+            <thead className="bg-sky-100">
               <tr>
                 <th className="border p-3">Name</th>
                 <th className="border p-3">Email</th>
